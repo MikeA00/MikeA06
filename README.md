@@ -1,0 +1,4 @@
+- 👋 Hi, I’m @MikeA06
+- 👀 I’m interested in coding
+- 🌱 I’m currently learning computer science
+- 📫 you can reach me by my email address antem2618@gmail.com
