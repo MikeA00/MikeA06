@@ -1,0 +1,22 @@
+class Solution {
+    public int[] smallerNumbersThanCurrent(int[] num) {
+        int len=num.length;
+        int [] ans =new int[len];
+        int l=0,r=0;
+        while(l<len){
+            if(r>=len){
+                l++;
+                r=0;
+            }
+            else if(l==r) r++;
+            else if(num[l]>num[r]) {
+                ans[l]++;
+                r++;
+            }else{
+                r++;
+            }
+        }
+        return ans;
+        
+    }
+}
