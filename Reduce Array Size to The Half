@@ -1,0 +1,20 @@
+class Solution {
+    public int minSetSize(int[] arr) {
+        int len= arr.length;
+        int max = Integer.MIN_VALUE;
+        for(int n:arr)
+            max= Math.max(max,n);
+        int freq[]= new int[max+1];
+                
+        for(int n:arr){
+            freq[n]++;
+        }
+        Arrays.sort(freq);
+        int count=0;
+        for(int i= max;len>arr.length/2;i--){
+            len-=freq[i];
+            count++;
+        }
+        return count++;
+    }
+}
