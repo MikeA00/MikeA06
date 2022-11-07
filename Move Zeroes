@@ -3,19 +3,16 @@ class Solution {
         int l=0,r=1;
         if(nums.length<2)
             return;
-        
         while(r<nums.length){
             if (nums[l]!=0){
                 l++;
                 r++;
             }else if (nums[r]==0){
                     r++;
-            
             }else{
                 nums[l]=nums[r];
                 nums[r]=0;
                 l++;
-
             }
         }
     }
