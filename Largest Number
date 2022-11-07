@@ -1,0 +1,24 @@
+class Solution {
+    public String largestNumber(int[] nums) {
+        if(nums.length==0)
+            return "";
+        String []temp=new String[nums.length];
+        for(int i=0;i<nums.length;i++){
+            temp[i]=String.valueOf(nums[i]);
+        }
+        Arrays.sort(temp,new Comparator<String>(){
+            public int compare(String a, String b){
+                String o1=a+b;
+                String o2=b+a;
+                return o2.compareTo(o1);
+            }
+        });
+        if (temp[0]=="0")
+            return "0";
+        String val="";
+        for(int i=0;i<temp.length;i++){
+            val=val+temp[i];
+        }
+        return val;
+    }
+}
