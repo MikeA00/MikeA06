@@ -1,0 +1,18 @@
+class Solution {
+    public int[] findOriginalArray(int[] changed) {
+        List<Integer> val = new ArrayList<>();
+        Queue<Integer> que= new LinkedList();
+        
+        Arrays.sort(changed);
+        
+        for(int num: changed){
+            if(!que.isEmpty() && num==que.peek())
+                que.poll();
+            else {
+                que.offer(num*2);
+                val.add(num);
+            }
+        }
+        return !que.isEmpty() ? new int[]{}: val.stream().mapToInt(i->i).toArray();
+    }
+}
